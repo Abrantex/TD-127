@@ -1,0 +1,13 @@
+HTTP/1.1 400 Bad Request
+Connection: close
+Content-Type: text/html; charset=UTF-8
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Site Nao Altorizado pelo proxy</h1>
+<p>Favor, use outro site</p>
+
+</body>
+</html> 
