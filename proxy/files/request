@@ -1,0 +1,10 @@
+GET / HTTP/1.1
+Host: wiki.ros.org
+User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:53.0) Gecko/20100101 Firefox/53.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate
+Cookie: __utma=268322824.864712411.1439765715.1496358388.1497153798.107; __utmz=268322824.1496358388.106.47.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); _pk_id.19.e331=e8f7ad1200d06d4b.1439765717.2.1443720216.1439769541.; __utma=146359735.729625504.1443718849.1471539053.1489785712.13; _ga=GA1.2.729625504.1443718849; __utmz=146359735.1489785712.13.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided); __utmb=268322824.6.10.1497153798; __utmc=268322824; __utmt=1
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+
