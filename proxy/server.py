@@ -18,13 +18,13 @@ def acha_get(string):
 
 def return_get(string_get):
 
-    file_name = "simplehtml4"
+    file_name = "files/simplehtml4"
     if(string_get == "http://www.facebook.com.br/"):
-        file_name = "blacklisthttp"
+        file_name = "files/blacklisthttp"
     elif(string_get == "http://www.youtube.com.br/"):
-        file_name = "blacklisthttp"
+        file_name = "files/blacklisthttp"
     elif(string_get == "http://www.netflix.com.br/"):
-        file_name = "blacklisthttp"
+        file_name = "files/blacklisthttp"
 
     return file_name
     
@@ -35,7 +35,8 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((HOST, PORT))
 s.listen(1)
 conn, addr = s.accept()
-#file2 = open("simplehtml3","r")
+
+file_request = open("files/request_byserver","w")
 print 'Connected by', addr
 while 1:
     data = conn.recv(1024)
@@ -43,16 +44,15 @@ while 1:
 	   print "data:", data,"fim" 
 	   break
     string_get = acha_get(data)
+    file_request.write(data)        #escreve requisicao no no arquivo files/request_byserver
     print "get eh: ",string_get,"a"
     file_return = return_get(string_get) 
     print "file: ",file_return 
-    file2 = open(file_return,"r") 
-    #print data
-    #print len(data)
+    file_tobrowser = open(file_return,"r") 
+   
     data = data + "la"
-    conn.sendall(str.encode(file2.read()))
-    #time.sleep(2)
-    #conn.shutdown(1)
+    conn.sendall(str.encode(file_tobrowser.read()))
     
 conn.close() #como fazer esse codigo sem ser em loop?
-file2.close()
+file_tobrowser.close()
+file_request.close()
